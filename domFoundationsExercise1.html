@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        THE TITLE OF YOUR WEBPAGE
+    </h1>
+    <div id="container"></div>
+
+    <button id="btn">Click here</button>
+    <h1 id="text1"></h1>
+    <h1 id="text2"></h1>
+
+    
+<script>
+    const container = document.querySelector('#container');
+
+    const content = document.createElement('div');
+    content.classList.add('content');
+    content.textContent = 'This is the glorious text-content!';
+
+    container.appendChild(content);
+
+    // p element
+    const p = document.createElement('p');
+    p.classList.add('p');
+    p.textContent = "Hey I'm red!";
+    p.style.color = 'red';
+    // p.style.fontSize = 'x-large';
+    // container.removeChild(p); Uses removeChild to remove p element
+    container.appendChild(p); 
+
+    // h3 element
+    const h3 = document.createElement('h3');
+    h3.classList.add('h3');
+    h3.textContent = "I'm a blue h3";
+    h3.setAttribute('style', 'color: blue'); // Using the set attribute method instead of the .style method
+    container.appendChild(h3);
+
+    // new div element
+    const div2 = document.createElement('div');
+    div2.classList.add('div2');
+    div2.style.border = 'solid black';
+    div2.style.backgroundColor = 'pink'
+    container.appendChild(div2);
+
+    // new h1 element within div element
+    const h1 = document.createElement('h1');
+    h1.classList.add('h1');
+    h1.textContent = "I'm in a div";
+    div2.appendChild(h1);
+
+    // new paragraph element within new div element
+    const p2 = document.createElement('p');
+    p2.classList.add('p');
+    p2.textContent = 'ME TOO!';
+    div2.appendChild(p2);
+
+    const btn = document.querySelector('#btn');
+    btn.addEventListener('click', () => {
+        alert("Hello World!");
+    });
+
+    btn.addEventListener('click', function (e) {
+        e.target.style.background = 'gray';
+    })
+
+   
+    
+    // btn_element.addEventListener('click', () => {
+    //     document.querySelector('#text1')
+    //     .textContent = 'Task 1 is perfomed';
+    // })
+
+
+
+</script>
+</body>
+</html>
+
